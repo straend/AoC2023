@@ -2,7 +2,7 @@
 #include "../src/dayDAY_NUMBER.h"
 
 static void AOC23_DayDAY_NUMBER_part1(benchmark::State& state) {
-  AOC23::Day1 a("../inputs/dayDAY_NUMBER.txt");
+  AOC23::DayDAY_NUMBER a("../inputs/dayDAY_NUMBER.txt");
   for (auto _ : state)
     a.Part1();
 }
