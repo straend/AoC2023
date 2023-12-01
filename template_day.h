@@ -1,16 +1,16 @@
 #ifndef AOC2023_DAYDAY_NUMBER_H
 #define AOC2023_DAYDAY_NUMBER_H
 
-#include <gtest/gtest.h>
-#include <iostream>
+#include "day.h"
 
 namespace AOC23
 {
-    class DayDAY_NUMBER
+    class DayDAY_NUMBER : public IDay
     {
-    public:
-        static int part1();
-        static int part2();
+        public:
+            Day1(std::string fname);
+            virtual int Part1();
+            virtual int Part2();
     };
 
 }

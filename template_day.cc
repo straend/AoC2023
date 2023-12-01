@@ -1,24 +1,32 @@
 
 #include "dayDAY_NUMBER.h"
+#include <fstream>
+#include <string>
+#include <regex>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <array>
+#include <iostream>
+
 using namespace AOC23;
 
-TEST(DayDAY_NUMBER, Part1) {
-    EXPECT_EQ(DayDAY_NUMBER::part1(), 0);
+DayDAY_NUMBER::DayDAY_NUMBER(std::string fname){
+    this->ReadFromFile(fname);
 }
 
-TEST(DayDAY_NUMBER, Part2) {
-  EXPECT_EQ(DayDAY_NUMBER::part2(), 0);
+int DayDAY_NUMBER::Part1(){
+    int sum = 0;
+    for (auto & line : this->lines) {
+        
+    }
+    return sum;
 }
 
-int DayDAY_NUMBER::part1(){
-  
-    std::cout << "Day DAY_NUMBER - Part 1" << std::endl;
-
-    return 0;
-}
-
-int DayDAY_NUMBER::part2(){
-    std::cout << "Day DAY_NUMBER - Part 2" << std::endl;
-
-    return 0;
+int DayDAY_NUMBER::Part2(){
+    int sum = 0;
+    for (auto & line : this->lines) {
+        
+    }
+    return sum;
 }

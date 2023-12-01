@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(aoc_2023)
 
 # GoogleTest requires at least C++14
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 cmake_policy(SET CMP0135 NEW)
 
@@ -25,25 +25,36 @@ enable_testing()
 file(GLOB day_SRC
      "src/*.h"
      "src/*.cc"
+     "main.cc"
 )
-file(GLOB day_SRC CONFIGURE_DEPENDS "src/*.h" "src/*.cc")
+file(GLOB day_SRC CONFIGURE_DEPENDS "src/*.h" "src/*.cc" "main.cc")
 
-add_executable(aoc_tests ${day_SRC} )
+file(GLOB test_SRC
+    "src/*.h"
+    "src/*.cc"
+    "tests/*.h"
+    "tests/*.cc"
+     
+)
+file(GLOB test_SRC CONFIGURE_DEPENDS "src/*.h" "src/*.cc" "tests/*.h" "tests/*.cc")
+
+add_executable(aoc_tests ${test_SRC} )
 
 file(GLOB benches_SRC
      "benches/*.h"
      "benches/*.cc"
 )
-file(GLOB helloworbenches_SRCld_SRC CONFIGURE_DEPENDS "*.h" "*.cc")
+file(GLOB benches_SRC CONFIGURE_DEPENDS "benches/*.h" "benches/*.cc" "src/*.h" "src/*.cc")
 
 add_executable(benchmarks ${benches_SRC} )
 
-
+add_executable(AOC ${day_SRC} )
 
 target_link_libraries(
   aoc_tests
   GTest::gtest_main
 )
+
 
 target_link_libraries(
   benchmarks
