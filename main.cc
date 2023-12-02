@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "src/day1.h"
+#include "src/day2.h"
 // Include headers here
 
 int main(int argc, char *argv[]){
@@ -12,6 +13,11 @@ int main(int argc, char *argv[]){
     
     if(1 == day) {
         AOC23::Day1 d("../inputs/day1.txt");
+        part1 = d.Part1();
+        part2 = d.Part2();
+    }
+    if(2 == day) {
+        AOC23::Day2 d("../inputs/day2.txt");
         part1 = d.Part1();
         part2 = d.Part2();
     }
