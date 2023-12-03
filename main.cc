@@ -3,6 +3,7 @@
 
 #include "src/day1.h"
 #include "src/day2.h"
+#include "src/day3.h"
 // Include headers here
 
 int main(int argc, char *argv[]){
@@ -17,7 +18,13 @@ int main(int argc, char *argv[]){
         part2 = d.Part2();
     }
     if(2 == day) {
+        //AOC23::Day2 d("../inputs/day2.txt");
         AOC23::Day2 d("../inputs/day2.txt");
+        part1 = d.Part1();
+        part2 = d.Part2();
+    }
+    if(3 == day) {
+        AOC23::Day3 d("../inputs/day3.txt");
         part1 = d.Part1();
         part2 = d.Part2();
     }
