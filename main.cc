@@ -1,10 +1,7 @@
 
 #include <iostream>
 
-#include "src/day1.h"
-#include "src/day2.h"
-#include "src/day3.h"
-// Include headers here
+#include "src/all_days.h"
 
 int main(int argc, char *argv[]){
     int part1 = 0;

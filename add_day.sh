@@ -20,8 +20,8 @@ sed "s|\DAY_NUMBER|${day}|g" "template_bench.cc" > "benches/bench_day${day}.cc"
 sed "s|\DAY_NUMBER|${day}|g" "template_test.cc" > "tests/test_day${day}.cc"
 
 # Add things to main.cc
-include_line="#include \"src/day${day}.h\""
-sed -i "/[[:blank:]]*\/\/ Include headers here/i ${include_line}" main.cc
+include_line="#include \"day${day}.h\""
+sed -i "/[[:blank:]]*\/\/ Include headers here/i ${include_line}" src/all_days.h
 
 if_statement="if(${day} == day) {\n\tAOC23::Day${day} d(\"../inputs/day${day}.txt\");\n\tpart1 = d.Part1();\n\tpart2 = d.Part2();\n}"
 sed -i "/[[:blank:]]*\/\/ Include if-statement here/i ${if_statement}" main.cc
