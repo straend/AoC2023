@@ -8,7 +8,7 @@ TEST(Day2, Part1) {
 }
 
 TEST(Day2, Part2) {
-    AOC23::Day2 d("../inputs/day2_part2.txt");
+    AOC23::Day2 d("../inputs/day2_test.txt");
   
     EXPECT_EQ(d.Part2(), 2286);
 }
