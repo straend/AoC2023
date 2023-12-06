@@ -5,6 +5,7 @@
 #include "day2.h"
 #include "day3.h"
 #include "day4.h"
+#include "day6.h"
 // Include headers here
 
 #endif  // AOC2023_ALLDAYS_H
