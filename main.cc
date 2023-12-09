@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[]){
     int part1 = 0;
-    int part2 = 0;
+    unsigned long long part2 = 0;
     int day = atoi(argv[1]);
     std::cout << "AoC 2023 - Day " << day << std::endl;
     
@@ -30,13 +30,28 @@ int main(int argc, char *argv[]){
         part1 = d.Part1();
         part2 = d.Part2();
     }
-if(5 == day) {
-	AOC23::Day5 d("../inputs/day5.txt");
-	part1 = d.Part1();
-	part2 = d.Part2();
-}
+    if(5 == day) {
+        AOC23::Day5 d("../inputs/day5.txt");
+        part1 = d.Part1();
+        part2 = d.Part2();
+    }
     if(6 == day) {
         AOC23::Day6 d("../inputs/day6.txt");
+        part1 = d.Part1();
+        part2 = d.Part2();
+    }
+    if(7 == day) {
+        AOC23::Day7 d("../inputs/day7.txt");
+        part1 = d.Part1();
+        part2 = d.Part2();
+    }
+    if(8 == day) {
+        AOC23::Day8 d("../inputs/day8.txt");
+        part1 = d.Part1();
+        part2 = d.Part2();
+    }
+    if(9 == day) {
+        AOC23::Day9 d("../inputs/day9.txt");
         part1 = d.Part1();
         part2 = d.Part2();
     }
