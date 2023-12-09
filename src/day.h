@@ -13,7 +13,8 @@ namespace AOC23 {
         public:
             ~IDay() {};
             virtual int Part1() = 0;
-            virtual int Part2() = 0;
+            virtual unsigned long long Part2() = 0;
+            
         protected:
             void ReadFromFile(const std::string &file_name);
             std::vector<std::string> lines;
