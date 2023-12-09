@@ -24,7 +24,7 @@ namespace AOC23
         public:
             Day4(std::string fname);
             virtual int Part1();
-            virtual int Part2();
+            virtual unsigned long long Part2();
             std::vector<CardGame> games;
     };
 

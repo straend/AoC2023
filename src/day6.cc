@@ -15,12 +15,25 @@ using namespace AOC23;
 
 Day6::Day6(std::string fname){
     this->ReadFromFile(fname);
-
+    
+    
+    for (auto & line : this->lines) {
+        char *cstr = new char[line.size()+1];
+        strcpy(cstr, line.c_str());
+        char *ptr = strtok(cstr, ":");
+        if (strcmp("Time", ptr) == 0){
+            ptr = strtok(NULL, ":");
+            std::string str = std::string(ptr);
+            str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
+            race.time = atoll(str.c_str());
+        } else if (strcmp("Distance", ptr) == 0) {
+            ptr = strtok(NULL, ":");
+            std::string str = std::string(ptr);
+            str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
+            race.record = atoll(str.c_str());
+        }
+    }
 }
-typedef struct {
-    long long time;
-    long long record;
-} race_t;
 
 int winners(race_t &r){
     const long long acc = 1;
@@ -74,23 +87,6 @@ int Day6::Part1(){
     return std::reduce(res.begin(), res.end(), 1, [](int a, int b) {return a*b;});
 }
 
-int Day6::Part2(){
-    race_t race;
-    for (auto & line : this->lines) {
-        char *cstr = new char[line.size()+1];
-        strcpy(cstr, line.c_str());
-        char *ptr = strtok(cstr, ":");
-        if (strcmp("Time", ptr) == 0){
-            ptr = strtok(NULL, ":");
-            std::string str = std::string(ptr);
-            str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
-            race.time = atoll(str.c_str());
-        } else if (strcmp("Distance", ptr) == 0) {
-            ptr = strtok(NULL, ":");
-            std::string str = std::string(ptr);
-            str.erase(remove_if(str.begin(), str.end(), isspace), str.end());
-            race.record = atoll(str.c_str());
-        }
-    }
+unsigned long long Day6::Part2(){
     return winners(race);
 }

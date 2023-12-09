@@ -86,7 +86,7 @@ int Day2::Part1(){
     return sum;
 }
 
-int Day2::Part2(){
+unsigned long long Day2::Part2(){
     int sum = 0;
     for (CubeGame &game : this->games){
         sum += game.powerCubes();

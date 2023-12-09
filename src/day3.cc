@@ -83,7 +83,7 @@ int Day3::Part1(){
     return sum;
 }
 
-int Day3::Part2(){
+unsigned long long Day3::Part2(){
     int sum = 0;
     
     int cl = 0;

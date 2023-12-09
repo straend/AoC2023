@@ -30,7 +30,7 @@ private:
     public:
         Day3(std::string fname);
         virtual int Part1();
-        virtual int Part2();
+        virtual unsigned long long Part2();
     private:
         std::vector<EnginePart> parts;
 

@@ -34,7 +34,7 @@ int Day4::Part1(){
     return sum;
 }
 
-int Day4::Part2(){
+unsigned long long Day4::Part2(){
     int sum = 0;
     
     std::vector<int> gg;

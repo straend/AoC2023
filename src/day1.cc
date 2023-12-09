@@ -65,7 +65,7 @@ int Day1::Part1(){
     return sum;
 }
 
-int Day1::Part2(){
+unsigned long long Day1::Part2(){
     int sum = 0;
     for (auto & line_org : this->lines) {
         auto line = first_and_last_digit(line_org);

@@ -5,12 +5,19 @@
 
 namespace AOC23
 {
+    typedef struct {
+        long long time;
+        long long record;
+    } race_t;
+
     class Day6 : public IDay
     {
         public:
             Day6(std::string fname);
             virtual int Part1();
-            virtual int Part2();
+            virtual unsigned long long Part2();
+        private:
+            race_t race;
     };
 
 }
