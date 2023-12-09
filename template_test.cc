@@ -8,7 +8,7 @@ TEST(DayDAY_NUMBER, Part1) {
 }
 
 TEST(DayDAY_NUMBER, Part2) {
-    AOC23::DayDAY_NUMBER d("../inputs/dayDAY_NUMBER_part2_test.txt");
+    AOC23::DayDAY_NUMBER d("../inputs/dayDAY_NUMBER_test.txt");
   
     EXPECT_EQ(d.Part2(), 281);
 }

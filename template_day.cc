@@ -23,7 +23,7 @@ int DayDAY_NUMBER::Part1(){
     return sum;
 }
 
-int DayDAY_NUMBER::Part2(){
+unsigned long long DayDAY_NUMBER::Part2(){
     int sum = 0;
     for (auto & line : this->lines) {
         

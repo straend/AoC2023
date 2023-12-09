@@ -10,7 +10,7 @@ namespace AOC23
         public:
             DayDAY_NUMBER(std::string fname);
             virtual int Part1();
-            virtual int Part2();
+            virtual unsigned long long Part2();
     };
 
 }
