@@ -60,6 +60,11 @@ int main(int argc, char *argv[]){
         part1 = d.Part1();
         part2 = d.Part2();
     }
+    if(11 == day) {
+        AOC23::Day11 d("../inputs/day11.txt");
+        part1 = d.Part1();
+        part2 = d.Part2();
+    }
     // Include if-statement here
 
     std::cout << "Part 1"<< std::endl << "\t" << part1 << std::endl;
